@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6e369286035f43f2a8109a346170456, type: 3}
   m_Name: CroquetSettings
   m_EditorClassIdentifier: 
-  apiKey: 15ofqxjH9xesxdnpOI6dsH0JgvLG2qMDMG7phdIGm
+  apiKey: your-api-key-here
   appPrefix: com.plutovr.apis-sample
   preferredPort: 5555
   pathToNode: /usr/local/bin/node
