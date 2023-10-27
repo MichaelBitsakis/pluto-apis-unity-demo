@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.pluto.plutoapis": "file:C:/Users/Administrator/source/repos/pluto-apis-unity",
+    "com.pluto.plutoapis": "https://github.com/PlutoVR/pluto-apis-unity.git",
     "com.unity.collab-proxy": "2.1.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.feature.vr": "1.0.0",
@@ -13,7 +13,7 @@
     "com.unity.xr.interaction.toolkit": "2.5.1",
     "com.unity.xr.management": "4.4.0",
     "com.unity.xr.openxr": "1.8.2",
-    "io.croquet.multiplayer": "file:C:/Users/Administrator/source/repos/croquet-for-unity-package",
+    "io.croquet.multiplayer": "https://github.com/croquet/croquet-for-unity-package.git",
     "net.gree.unity-webview": "https://github.com/gree/unity-webview.git?path=/dist/package-nofragment",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

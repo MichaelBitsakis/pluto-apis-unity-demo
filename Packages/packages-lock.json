@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.pluto.plutoapis": {
-      "version": "file:C:/Users/Administrator/source/repos/pluto-apis-unity",
+      "version": "https://github.com/PlutoVR/pluto-apis-unity.git",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "049c7a1af83c0dd7e198e39ae5cab5480d84d3af"
     },
     "com.unity.addressables": {
       "version": "1.19.19",
@@ -312,13 +313,14 @@
       "url": "https://packages.unity.com"
     },
     "io.croquet.multiplayer": {
-      "version": "file:C:/Users/Administrator/source/repos/croquet-for-unity-package",
+      "version": "https://github.com/croquet/croquet-for-unity-package.git",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.unity.addressables": "1.19.19",
         "com.unity.inputsystem": "1.5.0"
-      }
+      },
+      "hash": "9bddf70f2e43a0ef777ac04e8fcf6a15bfcc322e"
     },
     "net.gree.unity-webview": {
       "version": "https://github.com/gree/unity-webview.git?path=/dist/package-nofragment",
