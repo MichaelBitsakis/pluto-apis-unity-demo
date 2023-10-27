@@ -33,8 +33,9 @@ public class CroquetDraggable : MonoBehaviour
             // croquetSpatialSystem.SnapObjectTo(croquetHandle, transform.position, transform.rotation, transform.localScale);
             // croquetSpatialSystem.SnapObjectInCroquet(croquetHandle, transform.position, transform.rotation, transform.localScale);
             // croquetSpatialSystem.GetComponents().Remove(croquetSpatialComponent.gameObject.GetInstanceID());
-            croquetSpatialComponent.position = transform.position;
-            croquetSpatialComponent.rotation = transform.rotation;
+            croquetSpatialSystem.SnapObjectInCroquet(croquetHandle, transform.position, transform.rotation, transform.localScale);
+            croquetSpatialComponent.position = transform.localPosition;
+            croquetSpatialComponent.rotation.eulerAngles = transform.localEulerAngles;
         }
     }
 
@@ -55,7 +56,6 @@ public class CroquetDraggable : MonoBehaviour
 
         Debug.Log($"XRDESELECTS :: Trying to re-add {croquetSpatialComponent.gameObject.GetInstanceID()}");
 
-        croquetSpatialSystem.SnapObjectInCroquet(croquetHandle, transform.position, transform.rotation, transform.localScale);
         croquetSpatialSystem.GetComponents().Add(croquetSpatialComponent.gameObject.GetInstanceID(), croquetSpatialComponent);
         tharBeDraggin = false;
     }
