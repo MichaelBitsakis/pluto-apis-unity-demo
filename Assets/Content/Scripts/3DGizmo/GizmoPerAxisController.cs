@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class GizmoAxisController : MonoBehaviour
+public class GizmoPerAxisController : MonoBehaviour
 {
     public enum Axis
     {
@@ -26,6 +26,7 @@ public class GizmoAxisController : MonoBehaviour
     public bool isRotateGizmo;
     public bool isScaleGizmo;
 
+    // Start is called before the first frame update
     void Start()
     {
         gizmoMaterial = GetComponent<Renderer>().material;
@@ -34,6 +35,42 @@ public class GizmoAxisController : MonoBehaviour
         interactable.selectEntered.AddListener(OnSelectEntered);
         interactable.selectExited.AddListener(OnSelectExited);
     }
+
+    public void Update()
+    {
+        // Depending on the gizmo type, apply the appropriate transformation
+        switch (axis)
+        {
+            
+            case Axis.X:
+                // For translation gizmo, move the object along the X axis
+                if (isMoveGizmo)
+                    targetObject.position += transform.right;
+               
+                else
+                    Debug.Log("");
+                break;
+                
+            case Axis.Y:
+                // For translation gizmo, move the object along the Y axis
+                if (isMoveGizmo)
+                    targetObject.position += transform.up;
+                
+                break;
+                
+            case Axis.Z:
+                // For translation gizmo, move the object along the Z axis
+                if (isMoveGizmo)                    
+                    targetObject.position += transform.up;
+                else
+                    Debug.Log("");
+                break;
+                                
+        }
+
+    }
+
+    
 
     public void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -47,45 +84,9 @@ public class GizmoAxisController : MonoBehaviour
         // Additional logic for when the gizmo is deselected
     }
 
-    public void UpdateTransform(Vector3 inputDelta)
-    {
-        if (isDebug)
-        {
-            Debug.Log($"Updating transform on axis {axis} with inputDelta {inputDelta}");
-        }
-        
-        
-        // Depending on the gizmo type, apply the appropriate transformation
-        switch (axis)
-        {
-            case Axis.X:
-                // For translation gizmo, move the object along the X axis
-                if (isMoveGizmo)
-                    targetObject.position += transform.right * inputDelta.x;
-
-                // For rotation gizmo, rotate the object around the X axis
-                if (isRotateGizmo)
-                    targetObject.Rotate(transform.right, inputDelta.x, Space.World);
-
-                // For scale gizmo, scale the object along the X axis
-                if (isScaleGizmo)
-                    targetObject.localScale = new Vector3(targetObject.localScale.x + inputDelta.x, targetObject.localScale.y, targetObject.localScale.z);
-                break;
-
-            case Axis.Y:
-                // Apply transformations for the Y axis...
-                break;
-
-            case Axis.Z:
-                // Apply transformations for the Z axis...
-                break;
-        }
-    }
-
     void OnDestroy()
     {
         interactable.selectEntered.RemoveListener(OnSelectEntered);
         interactable.selectExited.RemoveListener(OnSelectExited);
     }
 }
-

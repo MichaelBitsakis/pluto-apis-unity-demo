@@ -10,8 +10,13 @@ public class TransformGizmoController : MonoBehaviour
     public GizmoAxisController yAxisController;
     public GizmoAxisController zAxisController;
 
+
+    [SerializeField] private bool isDebug;
+
     private GizmoAxisController activeController;
     private XRBaseInteractor activeInteractor;
+
+    private Vector3 lastInteractorPosition;
 
     void Start()
     {
@@ -44,6 +49,12 @@ public class TransformGizmoController : MonoBehaviour
             // Calculate the inputDelta based on controller movement
             Vector3 inputDelta = GetInputDelta();
 
+            if (isDebug)
+            {
+                Debug.Log($"Update called with inputDelta {inputDelta}");
+            }
+            
+
             // Call the UpdateTransform method of the active axis controller
             activeController.UpdateTransform(inputDelta);
         }
@@ -51,19 +62,36 @@ public class TransformGizmoController : MonoBehaviour
 
     private Vector3 GetInputDelta()
     {
-        // Logic to calculate how much the controller has moved/rotated/scaled since last frame
-        // This is a placeholder and should be replaced with actual input handling code
-        Vector3 inputDelta = new Vector3(0, 0, 0); // Placeholder
-        return inputDelta;
+        if (activeInteractor == null) return Vector3.zero;
+
+        Vector3 currentInteractorPosition = activeInteractor.transform.position;
+        Vector3 positionDelta = currentInteractorPosition - lastInteractorPosition;
+        lastInteractorPosition = currentInteractorPosition; // Update for next frame
+
+        // Convert the global position delta to a local space delta to apply to the target object
+        Vector3 localDelta = transform.InverseTransformDirection(positionDelta);
+
+        return localDelta;
     }
 
     private Vector3 GetInputFromController(XRBaseInteractor interactor)
     {
-        // This method should return the input from the XR controller
-        // For example, this could be the change in position of the controller since the last frame
-        // The actual implementation will depend on your input system and how you want to calculate the transformation
-        return new Vector3(0, 0, 0); // Placeholder
+        if (interactor == null) return Vector3.zero;
+
+        // Example: Calculate the change in position of the controller
+        Vector3 currentInteractorPosition = interactor.transform.position;
+        Vector3 positionDelta = currentInteractorPosition - lastInteractorPosition;
+        lastInteractorPosition = currentInteractorPosition; // Update for the next frame
+
+        // Depending on your gizmo's orientation and the desired behavior, 
+        // you might need to adjust the delta here.
+        // For instance, you might only be interested in the movement along certain axes,
+        // or you might want to scale the delta by some factor.
+
+        return positionDelta;
     }
+
+
 
     // Call this method from the child gizmo controllers when they are selected
     public void SetActiveController(GizmoAxisController controller)
