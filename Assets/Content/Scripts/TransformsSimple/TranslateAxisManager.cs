@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AxisManagerV2 : MonoBehaviour
+public class TranslateAxisManager : MonoBehaviour
 {
     public GameObject axisX, axisY, axisZ, targetObject;
     public bool targetIsMoved = false;
