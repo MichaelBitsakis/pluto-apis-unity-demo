@@ -3945,7 +3945,7 @@ RectTransform:
   - {fileID: 637198842}
   - {fileID: 904627016}
   - {fileID: 1521810631}
-  - {fileID: 1875133620}
+  - {fileID: 1268833414}
   m_Father: {fileID: 1636727609}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4986,6 +4986,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238204459}
   m_CullTransparentMesh: 1
+--- !u!1 &1268833413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268833414}
+  - component: {fileID: 1268833415}
+  m_Layer: 5
+  m_Name: ExitControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1268833414
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268833413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1875133620}
+  m_Father: {fileID: 991211949}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 27.8, y: 0}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1268833415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268833413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b4c12d3ab084848945853a90270aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openItems: []
+  closeItems:
+  - {fileID: 430677865}
+  - {fileID: 1090626477}
+  - {fileID: 386003712}
+  - {fileID: 472693629}
+  - {fileID: 1978262048}
+  - {fileID: 1238204459}
+  close: 1
+  open: 0
 --- !u!114 &1287159498 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2015539789043793658, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
@@ -5916,18 +5976,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875133619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 58609918}
-  m_Father: {fileID: 991211949}
-  m_RootOrder: 3
+  m_Father: {fileID: 1268833414}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.8, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875133621
@@ -5948,9 +6008,6 @@ MonoBehaviour:
   objectsToToggle:
   - {fileID: 991211948}
   - {fileID: 743139434}
-  - {fileID: 472693629}
-  - {fileID: 1978262048}
-  - {fileID: 1238204459}
   - {fileID: 1875133619}
   - {fileID: 1138852387}
 --- !u!114 &1875133623
@@ -6037,6 +6094,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1875133621}
         m_TargetAssemblyTypeName: ToggleButtonAndObjects, Assembly-CSharp
         m_MethodName: ToggleObjectsAndText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1268833415}
+        m_TargetAssemblyTypeName: ControlActiveState, Assembly-CSharp
+        m_MethodName: Control
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
