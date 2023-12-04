@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &403975562549674777
 Transform:
   m_ObjectHideFlags: 0
@@ -50,7 +50,9 @@ MonoBehaviour:
   axisX: {fileID: 673952745569014276}
   axisY: {fileID: 673952746491704597}
   axisZ: {fileID: 673952746662477312}
-  targetObject: {fileID: 0}
+  targetObjects:
+  - {fileID: 0}
+  - {fileID: 0}
   targetIsMoved: 0
 --- !u!1001 &403975562118580292
 PrefabInstance:
