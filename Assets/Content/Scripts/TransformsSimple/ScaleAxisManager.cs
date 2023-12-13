@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ScaleAxisManager : MonoBehaviour
 {
-    public GameObject axisX, axisY, axisZ, targetObject;
+    public GameObject axisX, axisY, axisZ, axisAll, targetObject; // Declare the new axis GameObject for uniform scaling
     public bool targetIsScaled = false;
     public float scaleMultiplier = 1.0f; // Multiplier for scaling effect
-    private Vector3 initialPosAxisX, initialPosAxisY, initialPosAxisZ;
+    private Vector3 initialPosAxisX, initialPosAxisY, initialPosAxisZ, initialPosAxisAll; // Store the initial position for axisAll
     private Vector3 initialScale;
 
     void Start()
@@ -14,6 +14,7 @@ public class ScaleAxisManager : MonoBehaviour
         initialPosAxisX = axisX.transform.position;
         initialPosAxisY = axisY.transform.position;
         initialPosAxisZ = axisZ.transform.position;
+        initialPosAxisAll = axisAll.transform.position; // Initialize initial position for axisAll
 
         // Store the initial scale of the target object
         initialScale = targetObject.transform.localScale;
@@ -27,6 +28,9 @@ public class ScaleAxisManager : MonoBehaviour
             CheckAndUpdateAxisScaling(axisX, initialPosAxisX, Vector3.right);
             CheckAndUpdateAxisScaling(axisY, initialPosAxisY, Vector3.up);
             CheckAndUpdateAxisScaling(axisZ, initialPosAxisZ, Vector3.forward);
+
+            // Check and update the uniform scaling axis
+            CheckAndUpdateUniformScaling();
         }
     }
 
@@ -47,6 +51,20 @@ public class ScaleAxisManager : MonoBehaviour
 
             // Reset axis to initial position
             axis.transform.position = initialAxisPos;
+        }
+    }
+
+    private void CheckAndUpdateUniformScaling()
+    {
+        Vector3 positionDelta = axisAll.transform.position - initialPosAxisAll;
+        if (positionDelta != Vector3.zero)
+        {
+            float scaleChange = positionDelta.magnitude * scaleMultiplier;
+            Vector3 newScale = initialScale + new Vector3(scaleChange, scaleChange, scaleChange);
+            targetObject.transform.localScale = newScale;
+
+            // Reset axisAll to its initial position after scaling
+            axisAll.transform.position = initialPosAxisAll;
         }
     }
 

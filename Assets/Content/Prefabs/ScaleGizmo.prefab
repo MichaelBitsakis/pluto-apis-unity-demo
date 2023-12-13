@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1131640803564190159
 Transform:
   m_ObjectHideFlags: 0
@@ -342,9 +342,10 @@ MonoBehaviour:
   axisX: {fileID: 3774076713941816021}
   axisY: {fileID: 3774076714492482559}
   axisZ: {fileID: 3774076715882944599}
+  axisAll: {fileID: 950506539910541541}
   targetObject: {fileID: 0}
   targetIsScaled: 0
-  scaleMultiplier: 2
+  scaleMultiplier: 6
 --- !u!1001 &4080647290053436678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -450,7 +451,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9028372784372625101, guid: cd24f2438a61c0345980621e629e1107, type: 3}
 --- !u!114 &4080647290053436674
@@ -738,7 +739,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9028372784372625101, guid: cd24f2438a61c0345980621e629e1107, type: 3}
 --- !u!114 &4080647290944548522
@@ -1026,7 +1027,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9028372784372625101, guid: cd24f2438a61c0345980621e629e1107, type: 3}
 --- !u!114 &4080647291468148608
