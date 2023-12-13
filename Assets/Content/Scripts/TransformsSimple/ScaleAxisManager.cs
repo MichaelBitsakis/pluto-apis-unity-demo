@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class ScaleAxisManager : MonoBehaviour
 {
-    public GameObject axisX, axisY, axisZ, axisAll, targetObject; // Declare the new axis GameObject for uniform scaling
+    public GameObject axisX, axisY, axisZ, axisAll, targetObject; // Declare the axis GameObjects and the target object
     public bool targetIsScaled = false;
     public float scaleMultiplier = 1.0f; // Multiplier for scaling effect
-    private Vector3 initialPosAxisX, initialPosAxisY, initialPosAxisZ, initialPosAxisAll; // Store the initial position for axisAll
-    private Vector3 initialScale;
+    private Vector3 initialPosAxisX, initialPosAxisY, initialPosAxisZ, initialPosAxisAll; // Store the initial positions of the axes
+    private Vector3 initialScale; // Store the initial scale of the target object
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class ScaleAxisManager : MonoBehaviour
         initialPosAxisX = axisX.transform.position;
         initialPosAxisY = axisY.transform.position;
         initialPosAxisZ = axisZ.transform.position;
-        initialPosAxisAll = axisAll.transform.position; // Initialize initial position for axisAll
+        initialPosAxisAll = axisAll.transform.position; // Store the initial position for the uniform scaling axis
 
         // Store the initial scale of the target object
         initialScale = targetObject.transform.localScale;
@@ -49,6 +49,9 @@ public class ScaleAxisManager : MonoBehaviour
             );
             targetObject.transform.localScale = newScale;
 
+            // Update initial scale to new scale
+            initialScale = newScale;
+
             // Reset axis to initial position
             axis.transform.position = initialAxisPos;
         }
@@ -63,6 +66,9 @@ public class ScaleAxisManager : MonoBehaviour
             Vector3 newScale = initialScale + new Vector3(scaleChange, scaleChange, scaleChange);
             targetObject.transform.localScale = newScale;
 
+            // Update initial scale to new scale
+            initialScale = newScale;
+
             // Reset axisAll to its initial position after scaling
             axisAll.transform.position = initialPosAxisAll;
         }
@@ -76,5 +82,7 @@ public class ScaleAxisManager : MonoBehaviour
     public void SetTargetScaleOff()
     {
         targetIsScaled = false;
+        // Optionally, you could update initialScale here if you want to keep the changes only after scaling is turned off
+        initialScale = targetObject.transform.localScale;
     }
 }
