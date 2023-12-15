@@ -1075,12 +1075,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116017298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.431, y: 0.73279047, z: 2.758}
+  m_LocalPosition: {x: -3.249, y: 0.73279047, z: 9.233}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &116017303
 MonoBehaviour:
@@ -4700,7 +4700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069321582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.699, z: 2.635}
+  m_LocalPosition: {x: 0, y: 0.699, z: 9.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6891,7 +6891,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.57015, y: 0.86705506}
+  m_AnchoredPosition: {x: 3.66, y: 0.86705506}
   m_SizeDelta: {x: 300, y: 187.58081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1636727610
@@ -7901,7 +7901,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978262048
 GameObject:
@@ -9019,7 +9019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414524414943179240, guid: 1d401e11b022102409be35b6145578a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.899
       objectReference: {fileID: 0}
     - target: {fileID: 414524414943179240, guid: 1d401e11b022102409be35b6145578a3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12380,6 +12380,7 @@ GameObject:
   - component: {fileID: 8189171602173568383}
   - component: {fileID: 8575046591651070673}
   - component: {fileID: 7062004111007357825}
+  - component: {fileID: 8575046591651070674}
   m_Layer: 2
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -16559,6 +16560,19 @@ MonoBehaviour:
   m_MotionControllerModeEnded:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8575046591651070674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3462571327635646413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73ac929c6f63eb40bb9fe720b0c698d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 5
 --- !u!114 &8895792788071426143
 MonoBehaviour:
   m_ObjectHideFlags: 0

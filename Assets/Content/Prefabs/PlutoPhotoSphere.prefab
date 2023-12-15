@@ -180,9 +180,10 @@ GameObject:
   - component: {fileID: 164969346648987146}
   - component: {fileID: 164969346648987149}
   - component: {fileID: 164969346648987148}
+  - component: {fileID: 164969347509075566}
   m_Layer: 0
   m_Name: PlutoPhotoSphere
-  m_TagString: Untagged
+  m_TagString: SphereTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 1048071452170546002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 35, y: 35, z: 35}
+  m_LocalScale: {x: 219.0685, y: 219.0685, z: 219.0685}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7585173675596489154}
@@ -557,6 +558,19 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &164969347509075566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048071452170546002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca56a2d369e1ab64ca64e41a77d402a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionAffordance: {fileID: 5146531492763578833}
 --- !u!1 &5108156065192790491
 GameObject:
   m_ObjectHideFlags: 0
