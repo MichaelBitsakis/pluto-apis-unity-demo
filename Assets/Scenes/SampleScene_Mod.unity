@@ -4116,6 +4116,11 @@ MonoBehaviour:
   m_GazeAssistanceDistanceScaling: 0
   m_ClampGazeAssistanceDistanceScaling: 0
   m_GazeAssistanceDistanceScalingClampValue: 0
+--- !u!1 &164969347509075559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6462258290577234375, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+  m_PrefabInstance: {fileID: 6156390440362609907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &239103481227790922
 GameObject:
   m_ObjectHideFlags: 0
@@ -8232,6 +8237,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6156390440362609915, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: PlutoSphere
+      value: 
+      objectReference: {fileID: 164969347509075559}
     - target: {fileID: 6156390440889221532, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
       propertyPath: m_RootOrder
       value: 11
