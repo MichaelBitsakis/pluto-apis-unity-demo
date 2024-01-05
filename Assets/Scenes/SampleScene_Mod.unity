@@ -4116,11 +4116,6 @@ MonoBehaviour:
   m_GazeAssistanceDistanceScaling: 0
   m_ClampGazeAssistanceDistanceScaling: 0
   m_GazeAssistanceDistanceScalingClampValue: 0
---- !u!1 &164969347509075559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6462258290577234375, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
-  m_PrefabInstance: {fileID: 6156390440362609907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &239103481227790922
 GameObject:
   m_ObjectHideFlags: 0
@@ -8233,14 +8228,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4483457617061813154, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
-      propertyPath: m_Convex
+    - target: {fileID: 1971694121277978419, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971694121277978419, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971694121277978419, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971694121277978419, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971694121277978419, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7959999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971694121277978420, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6156390440362609915, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
-      propertyPath: PlutoSphere
-      value: 
-      objectReference: {fileID: 164969347509075559}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4762029910639571278, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390440887985824, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390440887985831, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390440887985831, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390440887985831, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390440887985831, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.096
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390440887985831, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.796
+      objectReference: {fileID: 0}
     - target: {fileID: 6156390440889221532, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8288,6 +8355,30 @@ PrefabInstance:
     - target: {fileID: 6156390440889221533, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
       propertyPath: m_Name
       value: PlutoPhotoSphereLinker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390441005679792, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390441005679798, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390441005679798, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390441005679798, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390441005679798, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.096
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156390441005679798, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7959999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea9309f007b1e5b419d9b66cd3af95d5, type: 3}
