@@ -1,0 +1,11 @@
+newmtl blinn3SG
+Ns 100.000
+d 1.00000
+illum 2
+Kd 1.00000 1.00000 1.00000
+Ka 0.00000 0.00000 0.00000
+Ks 1.00000 1.00000 1.00000
+Ke 0.00000e+0 0.00000e+0 0.00000e+0
+map_Kd Lamp_Albedo.png
+bump Lamp_Height.png
+map_bump Lamp_Normal.png
